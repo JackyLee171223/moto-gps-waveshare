@@ -87,7 +87,7 @@ async function main() {
   await mapProvider?.initialize();
   const server = createGateway({ provider, mapProvider, allowedOrigin, providerMode });
 
-  server.listen(port, "127.0.0.1", () => {
+  server.listen(port, "0.0.0.0", () => {
     console.log(`MOTO GPS gateway listening on http://127.0.0.1:${port} (${providerMode})`);
   });
 
